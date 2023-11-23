@@ -3,11 +3,11 @@ import json
 from paho.mqtt import client as mqtt_client
 from influxdb import InfluxDBClient
 
-DBClient = InfluxDBClient(host='192.168.0.104', port=8086)
+DBClient = InfluxDBClient(host='IP_Address, port=8086)
 DBClient.create_database('BlocIoT_DB')
 print(DBClient.get_list_database())
 DBClient.switch_database('BlocIoT_DB')
-broker = '192.168.0.104'
+broker = 'IP_Address'
 port = 1883
 topic1 = "/lab/Sensor/Temperature1"
 topic2 = "/lab/Sensor/Humidity1"
